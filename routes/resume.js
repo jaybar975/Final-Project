@@ -36,7 +36,7 @@ const resume = {
       "website": "#",
       "startDate": "August, 2018",
       "endDate": "April 21st, 2019",
-      "summary": "Description...",
+      "summary": "Description..."
     }],
     "volunteer": [{
       "organization": "Organization",
@@ -50,14 +50,19 @@ const resume = {
       ]
     }],
     "education": [{
+      "nstitution": "Boulder Creek High School",
+      "area": "High School Diploma",
+      "startDate": "August 12th, 2016",
+      "endDate": "Still Attending",
+      "gpa": "2.6",
+      "courses": "Chemistry, Economics, English Language Arts 5-6, Financial Math",
       "institution": "Western Maricopa Educational Center",
       "area": "Web Development",
-      "studyType": "Certifications/Learn how to Code!",
       "startDate": "August 1st, 2018",
       "endDate": "Still Attending",
-      "gpa": "3.0",
+      "gpa": "4.0",
       "courses": [
-        "C-101-102 and C-201-202 "
+        "C-101-102 and C-201-202"
       ]
     }],
     "skills": [{
@@ -98,7 +103,11 @@ router.get('/', function(req, res, next) {
     { 
       title: 'Resume',
       name: resume.basics.name,
-      data: resume
+      // data: resume,
+      skills: resume.skills,
+      languages: resume.languages,
+      interests: resume.interests,
+      work: resume.work
     }
   );
 });
